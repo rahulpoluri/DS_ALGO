@@ -15,9 +15,9 @@ def if_anagram(s1, s2):
     hash_map2 = {}
 
     for i in s1:
-        hash_map1.get(i,0) +1
+        hash_map1[i]  = hash_map1.get(i,0) + 1
     for i in s2:
-        hash_map2.get(i, 0) + 1
+        hash_map2[i]  = hash_map2.get(i, 0) + 1
 
     return hash_map2 == hash_map1
 

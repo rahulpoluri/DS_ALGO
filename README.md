@@ -8,7 +8,7 @@ Templates & triggers: [cheatsheet.md](cheatsheet.md)
 | # | Problem | LC | Pattern | Date | Status |
 |---|---------|----|---------|------|--------|
 | 1 | [Contains Duplicate](hashing/contains_duplicate.py) | 217 | Hashing | 2026-11-07/08 | ✅ |
-| 2 | [Valid Anagram](hashing/valid_anagram.py) | 242 | Hashing | 2026-11-07/08 | ❌ bug — dict never updated |
+| 2 | [Valid Anagram](hashing/valid_anagram.py) | 242 | Hashing | 2026-11-07/08 | ✅ (fixed 9 Nov: assign the count back) |
 | 3 | [Group Anagrams](hashing/group_anagrams.py) | 49 | Hashing | 2026-11-07/08 | ✅ |
 | 4 | [Top K Frequent Elements](hashing/top_k_frequent.py) | 347 | Hashing | 2026-11-07/08 | ✅ |
 | 5 | [First Unique Character](hashing/first_unique_char.py) | 387 | Hashing | 2026-11-07/08 | ✅ |
