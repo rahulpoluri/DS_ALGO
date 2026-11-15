@@ -14,6 +14,8 @@ If no warmer day ever comes, put 0. Up to 100,000 days → O(n^2) nested loops t
 # - Coded it with if/elif cases (neighbour checks, manual ind += 1) → 3 rounds of patching:
 #   appended output in release order, last day never processed, EQUAL temps → infinite loop.
 # Lesson: every day does the SAME two steps, no special cases. Patching cases = over-engineering.
+# 15 Nov 2026: COLD redo ✅ ~7 min, named the pattern. Gap: complexity — said "O(n+k)"; it's amortized O(n)
+#   (each index pushed once, popped at most once → ≤ n pops in total). Space O(n) (decreasing input).
 
 # Template (see cheatsheet.md → Monotonic stack)
 def daily_temperatures(arr):

@@ -45,3 +45,23 @@ def daily_temperatures(arr):
 **Traps:** push INDEX not value · `while` not `if` (one day releases many) · output by index, not `append` ·
 test EQUAL values (`[50, 50, 60]`) · O(n): each index pushed + popped once.
 **Same pattern:** LC 739 Daily Temperatures · LC 496/503 Next Greater Element · LC 901 Stock Span · LC 84 Largest Rectangle.
+
+## Hashset — run start (consecutive sequences)
+**Triggers:** "consecutive", "longest run/streak", unsorted input, "must be O(n)" (= sorting is banned).
+
+**Recipe:** set for O(1) "does x exist?". Only start counting where a run BEGINS (`x - 1 not in s`), walk up.
+```python
+def longest_consecutive(nums):
+    s = set(nums)
+    best = 0
+    for x in s:                     # loop the set (dupes gone)
+        if x - 1 not in s:          # run start only
+            length = 1
+            while x + length in s:
+                length += 1
+            best = max(best, length)
+    return best
+```
+**Traps:** walking from EVERY number = O(n²) · counting "has a neighbour" ≠ run length · loop `arr` with dupes = repeat work ·
+test `[]`, `[5,5]`, two separate runs `[1,2,10,11,12]` · O(n): each number walked once (amortized, like monotonic stack).
+**Same pattern:** LC 128 Longest Consecutive Sequence · LC 1, 217 (set/dict lookup family).

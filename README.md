@@ -20,4 +20,5 @@ Templates & triggers: [cheatsheet.md](cheatsheet.md)
 | 11 | [Squares of a Sorted Array](two_pointers/squares_sorted_array.py) | 977 | Two pointers (opposite ends) | 2026-11-07/08 | ✅ |
 | 12 | [Container With Most Water](two_pointers/container_most_water.py) | 11 | Two pointers (opposite ends) | 2026-11-07/08 | ✅ |
 | 13 | [Valid Parentheses](stack/valid_parentheses.py) | 20 | Stack | 2026-11-09 | ✅ |
-| 14 | [Daily Temperatures](stack/daily_temperatures.py) | 739 | Monotonic stack | 2026-11-11 | ✅ with hints (patched cases 3× → redo cold) |
+| 14 | [Daily Temperatures](stack/daily_temperatures.py) | 739 | Monotonic stack | 2026-11-11 | ✅ with hints (patched cases 3× → redo cold) · ✅ COLD 15 Nov (~7 min) |
+| 15 | [Longest Consecutive Sequence](hashing/longest_consecutive_sequence.py) | 128 | Hashset (run start) | 2026-11-15 | ❌→✅ cold fail (O(n²)), fixed with hint |
