@@ -22,3 +22,4 @@ Templates & triggers: [cheatsheet.md](cheatsheet.md)
 | 13 | [Valid Parentheses](stack/valid_parentheses.py) | 20 | Stack | 2026-11-09 | ✅ |
 | 14 | [Daily Temperatures](stack/daily_temperatures.py) | 739 | Monotonic stack | 2026-11-11 | ✅ with hints (patched cases 3× → redo cold) · ✅ COLD 15 Nov (~7 min) |
 | 15 | [Longest Consecutive Sequence](hashing/longest_consecutive_sequence.py) | 128 | Hashset (run start) | 2026-11-15 | ❌→✅ cold fail (O(n²)), fixed with hint |
+| 16 | [Longest Square Streak](hashing/longest_square_streak.py) | 2501 | Hashset (run start) — unseen variant of 128 | 2026-11-18 | ✅ COLD ~17 min, pattern transferred |
