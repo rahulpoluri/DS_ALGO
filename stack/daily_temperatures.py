@@ -44,3 +44,8 @@ if __name__ == "__main__":
     for arr, want in cases:
         assert daily_temperatures(arr) == want, (arr, daily_temperatures(arr))
     print("all tests passed")
+
+# Re-solve 24 Nov 2026 (re-skinned as "days until a higher account balance", for fun, evening):
+# - Naive O(n^2) named right, but claimed "less than O(n^2) because the list shrinks" -> wrong, n + (n-1) + ... = O(n^2).
+# - Recognised the monotonic stack from 901 after 1 hint; coded it correctly first try (indices + values on stack,
+#   answer written to the POPPED day, strict >). Output [2, 1, 3, 2, 1, 0, 0] correct.
