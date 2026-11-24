@@ -65,3 +65,20 @@ def longest_consecutive(nums):
 **Traps:** walking from EVERY number = O(n²) · counting "has a neighbour" ≠ run length · loop `arr` with dupes = repeat work ·
 test `[]`, `[5,5]`, two separate runs `[1,2,10,11,12]` · O(n): each number walked once (amortized, like monotonic stack).
 **Same pattern:** LC 128 Longest Consecutive Sequence · LC 1, 217 (set/dict lookup family).
+
+## Sliding window (variable size)
+**When:** longest/shortest CONSECUTIVE run (subarray/substring) meeting a condition, values that only grow the sum (positives).
+**Why O(n):** right moves n times, left moves at most n times. Left never goes back: with positives, if [l..r] is
+over budget, every longer window starting at l is too.
+```python
+left = cur = best = 0
+for right, x in enumerate(arr):
+    cur += x                       # 1. add
+    while cur > budget:            # 2. shrink until valid
+        cur -= arr[left]; left += 1
+    best = max(best, right - left + 1)   # 3. record (always valid here)
+```
+**Variant:** `if` instead of `while` = non-shrinking window (length always = best so far; also correct for "longest").
+**Traps:** recording a window before it's valid · missing the last window (record after adding) · `<` vs `<=` ·
+negatives break it (use prefix sums) · test exact-budget, one huge value, `[]`.
+**Same pattern:** LC 209 Min Size Subarray Sum · LC 1004 Max Consecutive Ones III · LC 3 Longest Substring w/o Repeat · LC 904.

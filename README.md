@@ -24,3 +24,4 @@ Templates & triggers: [cheatsheet.md](cheatsheet.md)
 | 15 | [Longest Consecutive Sequence](hashing/longest_consecutive_sequence.py) | 128 | Hashset (run start) | 2026-11-15 | ❌→✅ cold fail (O(n²)), fixed with hint |
 | 16 | [Longest Square Streak](hashing/longest_square_streak.py) | 2501 | Hashset (run start) — unseen variant of 128 | 2026-11-18 | ✅ COLD ~17 min, pattern transferred |
 | 17 | [Online Stock Span](stack/online_stock_span.py) | 901 | Monotonic stack — unseen variant of 739 | 2026-11-23 | ✅ with 2 hints (stuck 32 min; class-attr bug fixed) |
+| 18 | [Longest Days Under Budget](sliding_window/longest_days_under_budget.py) | ~1004/209 | Sliding window (variable) — NEW pattern | 2026-11-24 | ✅ 3rd attempt (1: recorded over-budget window, 2: missed last window + <) — ended on non-shrinking window |
